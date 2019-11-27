@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1574882250764.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "3A90EBC8",
+    "lastKnownWriteTime" : 21474836484,
+    "last_content_update" : 1574882250764,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "3247BAFE",
+        "caption" : "twoquestions",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=twoquestions&cache_key=3247BAFE",
+        "displayedObservations" : 16,
+        "environment" : "",
+        "expression" : "twoquestions",
+        "object" : "twoquestions",
+        "preview" : 0,
+        "totalObservations" : 16,
+        "variables" : 3
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

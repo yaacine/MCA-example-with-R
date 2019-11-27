@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1574891878384.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "960BEA2A",
+    "lastKnownWriteTime" : 0,
+    "last_content_update" : 1574891878384,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "E797281C",
+        "caption" : "disjonctif",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=disjonctif&cache_key=E797281C",
+        "displayedObservations" : "47",
+        "environment" : "",
+        "expression" : "disjonctif",
+        "object" : "disjonctif",
+        "preview" : "0",
+        "totalObservations" : "47",
+        "variables" : "38"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}
