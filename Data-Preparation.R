@@ -36,7 +36,7 @@ fviz_mca_biplot(res.mca,
                 repel = TRUE, # Avoid text overlapping (slow if many point)
                 ggtheme = theme_minimal())
 
-var <- get_mca_var(res.mca)
+
 
 "correlation entre les variables"
 fviz_mca_var(res.mca, choice = "mca.cor", 
@@ -51,15 +51,26 @@ fviz_mca_var(res.mca, choice = "mca.cor",
 
  
  
- "qualité de reprasentation"
+ # ******************** qualité de reprasentation des variables ***********************
+ var <- get_mca_var(res.mca)
  var$cos2
+ 
  "visualiser les variables colorés selon les qualités de representations"
  fviz_mca_var(res.mca, col.var = "cos2",
               gradient.cols = c("#00AFBB", "#E7B800", "#FC4E07"), 
               repel = TRUE, # Avoid text overlapping
               ggtheme = theme_minimal())
  
-
+ # ******************** qualité de reprasentation des individus ***********************
+ var1 <- get_mca_ind(res.mca)
+ var1$cos2
+ 
+ "visualiser les variables colorés selon les qualités de representations"
+ fviz_mca_ind(res.mca, col.ind = "cos2",
+              gradient.cols = c("#00AFBB", "#E7B800", "#FC4E07"), 
+              repel = TRUE, # Avoid text overlapping
+              ggtheme = theme_minimal())
+ 
  
  # relation entre les modalités
  fviz_mca_var(res.mca, col.var="blue", shape.var = 15,
@@ -80,8 +91,6 @@ fviz_mca_var(res.mca, choice = "mca.cor",
  #contribution of rows to plot 1-2
  fviz_contrib(res.mca, choice = "var", axes = 1:2, top = 15)
  
- res.mca <- MCA(clean_responses,ind.sup =c(17,20))
- 
  #************* contributions des individus *******************
  # Contributions of rows to dimension 1
  fviz_contrib(res.mca, choice = "ind", axes = 1, top = 15)
@@ -92,10 +101,26 @@ fviz_mca_var(res.mca, choice = "mca.cor",
  
  
  
+ # *************** representarions avec ellipse ********************
+ #une seule variable
+ fviz_mca_ind(res.mca, habillage = 4, addEllipses = TRUE)
+ 
+ #deux variables
+ fviz_ellipses(res.mca, c("prog", "bien_exposée"), geom = "point")
+ 
+ 
+ 
  #croiser deux questions 
- quest1 <- disjonctif[,c(1,4)]
- quest2 <- disjonctif[,c(5:8)]
- quest1_2 = t(quest1) %*% quest2
+ twoquestions <- table(clean_responses[,c(1,3)])
+ View(twoquestions)
  
  
+ 
+ 
+ # just for debug 
+ X1 <- as.data.frame(X1)
+ for(i in 1:dim(X1)[2]){
+         X1[i]<-as.numeric(X1[i])
+ }
+ summary(a)
  
